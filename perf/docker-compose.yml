@@ -6,6 +6,8 @@ services:
     build: .
     ports:
       - "8080:80" # in the event that you want to manually test the site
+    environment: 
+        ASPNETCORE_ENVIORMENT: Development
   testing:
     image: buildpack-deps:curl 
     volumes:
